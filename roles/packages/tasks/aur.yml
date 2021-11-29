@@ -1,0 +1,17 @@
+---
+- name: Install AUR helper (yay)
+  kewlfft.aur.aur:
+    name: yay
+  become: true
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name:
+      - etcher-bin
+      - ledger-live-bin
+      - ledger-udev
+      - m64py
+      - unrar-free
+    state: present
+    use: yay
+  become: true
