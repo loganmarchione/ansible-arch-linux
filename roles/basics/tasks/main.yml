@@ -34,7 +34,8 @@
     enabled: yes
   become: true
 
-- name: Manually update package cache
+- name: Upgrade system
   community.general.pacman:
     update_cache: yes
+    upgrade: yes
   become: true
