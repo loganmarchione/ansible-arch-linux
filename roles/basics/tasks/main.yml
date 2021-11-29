@@ -5,3 +5,23 @@
       - reflector
       - xdg-user-dirs
     state: present
+
+- name: Update reflector configuration file
+  ansible.builtin.template:
+    src: reflector.conf
+    dest: /etc/xdg/reflector/reflector.conf
+    backup: no
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Run reflector once
+  ansible.builtin.systemd:
+    name: reflector.service
+    state: started
+
+- name: Run reflector on a timer
+  ansible.builtin.systemd:
+    name: reflector.timer
+    state: started
+    enabled: yes
