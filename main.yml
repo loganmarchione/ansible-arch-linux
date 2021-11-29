@@ -8,3 +8,5 @@
     - packages
     - flatpak
     - microcode
+    - printing_scanning
+    - dotfiles

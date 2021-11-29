@@ -1,0 +1,22 @@
+---
+- name: Printing
+  community.general.pacman:
+    name:
+      - cups
+      - cups-pdf
+  become: true
+
+- name: Start systemd service - cups
+  ansible.builtin.systemd:
+    name: cups.socket
+    state: started
+    enabled: yes
+  become: true
+
+- name: Scanning
+  community.general.pacman:
+    name:
+      - sane
+      - sane-airscan
+      - simple-scan
+  become: true
