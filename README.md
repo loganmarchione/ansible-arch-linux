@@ -6,4 +6,8 @@ Ansible playbook to setup my Arch Linux desktop (i.e., meant to be run against l
 
 ## Requirements
 
-`sudo pacman -S ansible python`
+1. Install the necessary packages `sudo pacman -S ansible git python`
+1. Install the Ansible requirements `ansible-galaxy collection install community.general`
+1. Clone this repo `https://github.com/loganmarchione/ansible-arch-linux.git`
+1. Run the playbook `ansible-playbook main.yml --ask-become-pass`
+
