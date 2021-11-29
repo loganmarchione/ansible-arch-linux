@@ -38,4 +38,3 @@
   community.general.pacman:
     update_cache: yes
   become: true
-
