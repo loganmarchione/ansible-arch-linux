@@ -5,6 +5,7 @@ ignore: |
     .github/workflows/main.yml
 
 rules:
+  line-length: disable
   truthy:
     allowed-values:
       - "yes"
