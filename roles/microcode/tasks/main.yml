@@ -12,3 +12,11 @@
       - intel-ucode
   become: true
   when: "'GenuineIntel' in ansible_processor"
+
+- name: Microcode bootloader reminder
+  pause:
+    prompt: |
+      "This is a reminder that you need to configure your bootloader for microcode"
+      "https://wiki.archlinux.org/title/microcode"
+      "Press [ENTER] to continue"
+    echo: no
