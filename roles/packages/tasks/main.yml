@@ -2,6 +2,65 @@
 - name: Install packages
   community.general.pacman:
     name:
+      - chromium
+      - code
+      - conky
+      - filelight
       - firefox
       - flatpak
+      - fwupd
+      - gparted
+      - gvfs
+      - gvfs-smb
+      - gwenview
+      - htop
+      - inkscape
+      - jq
+      - kate
+      - kcalc
+      - keepassxc
+      - libreoffice-fresh
+      - linux-firmware
+      - ncdu
+      - neofetch
+      - openresolv
+      - openvpn
+      - p7zip
+      - pacman-contrib
+      - qbittorrent
+      - rsync
+      - solaar
+      - spectacle
+      - texmaker
+      - texlive-most
+      - thunar
+      - thunderbird
+      - unzip
+      - wget
+      - wireguard-tools
+      - vlc
     state: present
+  become: true
+
+- name: Install fonts
+  community.general.pacman:
+    name:
+      - adobe-source-code-pro-fonts
+      - adobe-source-sans-pro-fonts
+      - adobe-source-serif-pro-fonts
+      - noto-fonts
+      - noto-fonts-emoji
+      - ttf-anonymous-pro
+      - ttf-dejavu
+      - otf-cascadia-code
+      - ttf-cascadia-code
+      - ttf-hack
+    state: present
+  become: true
+
+- name: Start systemd service - paccache.timer
+  ansible.builtin.systemd:
+    name: paccache.timer
+    state: started
+    enabled: yes
+  become: true

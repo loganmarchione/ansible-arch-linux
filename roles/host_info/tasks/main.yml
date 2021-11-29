@@ -1,0 +1,6 @@
+---
+- name: Check distribution is supported
+  assert:
+    that: ansible_distribution == "Archlinux"
+    fail_msg: "Distribution '{{ ansible_distribution }}' is not supported."
+    success_msg: "I run Arch, btw"

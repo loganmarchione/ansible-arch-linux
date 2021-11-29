@@ -1,6 +1,9 @@
 ---
 - hosts: all
-  become: true
   roles:
+    - host_info
     - basics
+    - x
+    - kde
     - packages
+    - flatpak

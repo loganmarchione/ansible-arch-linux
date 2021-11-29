@@ -5,6 +5,11 @@
       - reflector
       - xdg-user-dirs
     state: present
+  become: true
+
+- name: Update xdg-user-dirs
+  ansible.builtin.shell: xdg-user-dirs-update
+  changed_when: no
 
 - name: Update reflector configuration file
   ansible.builtin.template:
@@ -14,14 +19,22 @@
     owner: root
     group: root
     mode: 0644
+  become: true
 
-- name: Run reflector once
+- name: Start systemd service - reflector.service
   ansible.builtin.systemd:
     name: reflector.service
     state: started
+  become: true
 
-- name: Run reflector on a timer
+- name: Start systemd service - reflector.timer
   ansible.builtin.systemd:
     name: reflector.timer
     state: started
     enabled: yes
+  become: true
+
+- name: Manually update package cache
+  community.general.pacman:
+    update_cache: yes
+  become: true

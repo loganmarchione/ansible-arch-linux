@@ -1,0 +1,19 @@
+---
+- name: Add Flathub repository
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+  become: true
+
+- name: Install flatpaks
+  community.general.flatpak:
+    name:
+      - com.discordapp.Discord
+      - com.github.tchx84.Flatseal
+      - com.slack.Slack
+      - com.spotify.Client
+      - com.valvesoftware.Steam
+      - com.valvesoftware.Steam.CompatibilityTool.Proton
+    state: present
+  become: true
