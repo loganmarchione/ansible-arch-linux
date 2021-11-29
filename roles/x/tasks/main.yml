@@ -22,3 +22,4 @@
     state: present
   become: true
   when: "'Radeon' in gpu_result.stdout"
+
