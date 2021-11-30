@@ -5,6 +5,9 @@ ignore: |
     .github/workflows/main.yml
 
 rules:
+  braces:
+    level: warning
+    max-spaces-inside: 1
   line-length: disable
   truthy:
     allowed-values:
