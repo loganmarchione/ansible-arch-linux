@@ -45,6 +45,7 @@
       - p7zip
       - pacman-contrib
       - picocom
+      - pkgstats
       - qbittorrent
       - remmina
       - rsync
