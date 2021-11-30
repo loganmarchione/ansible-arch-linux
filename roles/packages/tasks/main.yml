@@ -3,20 +3,28 @@
   community.general.pacman:
     name:
       - bash
+      - bash-completion
       - chromium
       - code
       - conky
+      - curl
+      - docker
       - e2fsprogs
       - filelight
       - firefox
+      - flameshot
       - flatpak
       - fwupd
+      - gnupg
       - gparted
       - gvfs
       - gvfs-smb
       - gwenview
+      - hugo
       - htop
       - inkscape
+      - inetutils
+      - iotop
       - iputils
       - jq
       - kate
@@ -24,15 +32,23 @@
       - keepassxc
       - libreoffice-fresh
       - linux-firmware
+      - man
+      - man-db
+      - man-pages
+      - minicom
       - ncdu
       - neofetch
+      - networkmanager
       - openresolv
       - openssh
       - openvpn
       - p7zip
       - pacman-contrib
+      - picocom
       - qbittorrent
+      - remmina
       - rsync
+      - screen
       - solaar
       - spectacle
       - sudo
@@ -40,6 +56,7 @@
       - texlive-most
       - thunar
       - thunderbird
+      - tree
       - usbutils
       - unzip
       - wget
@@ -47,8 +64,13 @@
       - vi
       - vim
       - vlc
+      - wpa_supplicant
       - xfsprogs
+      - youtube-dl
+      - zip
       - zsh
+      - zsh-completions
+      - zstd
     state: present
   become: true
 
