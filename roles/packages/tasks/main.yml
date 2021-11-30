@@ -2,9 +2,11 @@
 - name: Install packages
   community.general.pacman:
     name:
+      - bash
       - chromium
       - code
       - conky
+      - e2fsprogs
       - filelight
       - firefox
       - flatpak
@@ -15,6 +17,7 @@
       - gwenview
       - htop
       - inkscape
+      - iputils
       - jq
       - kate
       - kcalc
@@ -24,6 +27,7 @@
       - ncdu
       - neofetch
       - openresolv
+      - openssh
       - openvpn
       - p7zip
       - pacman-contrib
@@ -31,14 +35,20 @@
       - rsync
       - solaar
       - spectacle
+      - sudo
       - texmaker
       - texlive-most
       - thunar
       - thunderbird
+      - usbutils
       - unzip
       - wget
       - wireguard-tools
+      - vi
+      - vim
       - vlc
+      - xfsprogs
+      - zsh
     state: present
   become: true
 

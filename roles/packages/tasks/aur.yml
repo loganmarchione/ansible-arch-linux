@@ -12,6 +12,7 @@
       - ledger-udev
       - m64py
       - unrar-free
+      - ventoy-bin
     state: present
     use: yay
   become: true
