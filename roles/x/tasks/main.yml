@@ -7,7 +7,7 @@
   become: true
 
 - name: Detect GPU
-  ansible.builtin.shell: lspci -v | grep -A1 -e VGA -e 3D
+  ansible.builtin.shell: set -o pipefail && lspci -v | grep -A1 -e VGA -e 3D
   register: gpu_result
   changed_when: no
 

@@ -8,7 +8,7 @@
   become: true
 
 - name: Update xdg-user-dirs
-  ansible.builtin.shell: xdg-user-dirs-update
+  ansible.builtin.shell: xdg-user-dirs-update  # noqa command-instead-of-shell
   changed_when: no
 
 - name: Update reflector configuration file
