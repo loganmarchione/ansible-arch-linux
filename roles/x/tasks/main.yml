@@ -22,3 +22,13 @@
     state: present
   become: true
   when: "'Radeon' in gpu_result.stdout"
+
+- name: Install GPU drivers (Intel)
+  community.general.pacman:
+    name:
+      - mesa
+      - vulkan-intel
+      - xf86-video-intel
+    state: present
+  become: true
+  when: "'Intel' in gpu_result.stdout"
