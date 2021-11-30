@@ -6,6 +6,14 @@
       - cups-pdf
   become: true
 
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name:
+      - brlaser-git
+    state: present
+    use: yay
+  become: true
+
 - name: Start systemd service - cups
   ansible.builtin.systemd:
     name: cups.socket
@@ -19,4 +27,12 @@
       - sane
       - sane-airscan
       - simple-scan
+  become: true
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name:
+      - brscan4
+    state: present
+    use: yay
   become: true
