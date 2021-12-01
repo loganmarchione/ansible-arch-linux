@@ -15,16 +15,19 @@
     state: present
   become: true
 
-- name: Update xdg-user-dirs
-  ansible.builtin.shell: xdg-user-dirs-update  # noqa command-instead-of-shell
-  changed_when: no
-
 - name: Start systemd service - paccache.timer
   ansible.builtin.systemd:
     name: paccache.timer
     state: started
     enabled: yes
   become: true
+
+- name: Start systemd service - xdg-user-dirs-update.service
+  ansible.builtin.systemd:
+    name: xdg-user-dirs-update.service
+    state: started
+    enabled: yes
+    scope: user
 
 - name: Update reflector configuration file
   ansible.builtin.template:
