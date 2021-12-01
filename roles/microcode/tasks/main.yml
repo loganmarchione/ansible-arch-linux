@@ -22,4 +22,4 @@
           "https://wiki.archlinux.org/title/microcode"
           "Press [ENTER] to continue"
         echo: no
-  when: install_microcode == true
+  when: install_microcode

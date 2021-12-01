@@ -34,4 +34,4 @@
         state: present
       become: true
       when: "'Intel' in gpu_result.stdout"
-  when: install_gpu_drivers == true
+  when: install_gpu_drivers

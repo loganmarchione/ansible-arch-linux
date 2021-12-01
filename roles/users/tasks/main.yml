@@ -36,6 +36,7 @@
 - name: Install VS Code extensions
   ansible.builtin.shell: code --install-extension {{ item }}  # noqa command-instead-of-shell
   with_items: "{{ vscode_extension_list }}"
+  changed_when: no
 
 - name: Get dotfiles
   ansible.builtin.get_url:
@@ -67,7 +68,7 @@
     - lvm2-lvmetad.service
     - lvm2-lvmetad.socket
     - lvm2-monitor.service
-  when: disable_lvm == true
+  when: disable_lvm
 
 - name: Mask systemd services - systemd homed
   ansible.builtin.systemd:
@@ -78,4 +79,4 @@
     - systemd-homed.service
     - systemd-userdbd.service
     - systemd-userdbd.socket
-  when: disable_systemd_homed == true
+  when: disable_systemd_homed
