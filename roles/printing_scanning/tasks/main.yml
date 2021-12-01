@@ -1,38 +1,37 @@
 ---
-- name: Printing
+- name: Install printing and scanning packages
   community.general.pacman:
     name:
       - cups
       - cups-pdf
+      - sane
+      - sane-airscan
+      - simple-scan
   become: true
 
-- name: Install AUR packages
+- name: Install printing and scanning packages (AUR)
   kewlfft.aur.aur:
     name:
       - brlaser-git
+      - brscan4
     state: present
     use: yay
   become: true
 
-- name: Start systemd service - cups
+- name: Start systemd service - cups.socket
   ansible.builtin.systemd:
     name: cups.socket
     state: started
     enabled: yes
   become: true
 
-- name: Scanning
-  community.general.pacman:
-    name:
-      - sane
-      - sane-airscan
-      - simple-scan
-  become: true
+- name: Detect scanner
+  ansible.builtin.shell: set -o pipefail && scanimage -L
+  register: scanimage_result
+  changed_when: no
 
-- name: Install AUR packages
-  kewlfft.aur.aur:
-    name:
-      - brscan4
-    state: present
-    use: yay
-  become: true
+- name: Display scanner
+  ansible.builtin.debug:
+    msg:
+      - "Detected the scanner below"
+      - "{{ scanimage_result.stdout }}"

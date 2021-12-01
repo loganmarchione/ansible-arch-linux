@@ -9,7 +9,13 @@
   git_config:
     name: user.email
     scope: global
-    value: "{{ git.email | b64decode }}"
+    value: "{{ git.email_b64 | b64decode }}"
+
+- name: Git config credential helper
+  git_config:
+    name: credential.helper
+    scope: global
+    value: "{{ git.helper }}"
 
 - name: Git config credential helper
   git_config:

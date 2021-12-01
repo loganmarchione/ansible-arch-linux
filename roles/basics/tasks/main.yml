@@ -3,6 +3,7 @@
   community.general.pacman:
     name:
       - reflector
+      - pacman-contrib
       - xdg-user-dirs
     state: present
   become: true
@@ -11,9 +12,16 @@
   ansible.builtin.shell: xdg-user-dirs-update  # noqa command-instead-of-shell
   changed_when: no
 
+- name: Start systemd service - paccache.timer
+  ansible.builtin.systemd:
+    name: paccache.timer
+    state: started
+    enabled: yes
+  become: true
+
 - name: Update reflector configuration file
   ansible.builtin.template:
-    src: reflector.conf
+    src: reflector.conf.j2
     dest: /etc/xdg/reflector/reflector.conf
     backup: no
     owner: root
@@ -36,13 +44,22 @@
 
 - name: Update pacman configuration file
   ansible.builtin.template:
-    src: pacman.conf
+    src: pacman.conf.j2
     dest: /etc/pacman.conf
     backup: no
     owner: root
     group: root
     mode: 0644
   become: true
+
+- name: Update makepkg configuration file
+  ansible.builtin.template:
+    src: makepkg.conf
+    dest: "/home/{{ user.name }}/.makepkg.conf"
+    backup: no
+    owner: "{{ user.name }}"
+    group: "{{ user.group }}"
+    mode: 0644
 
 - name: Upgrade system
   community.general.pacman:

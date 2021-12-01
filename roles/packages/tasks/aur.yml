@@ -6,13 +6,7 @@
 
 - name: Install AUR packages
   kewlfft.aur.aur:
-    name:
-      - etcher-bin
-      - ledger-live-bin
-      - ledger-udev
-      - m64py
-      - unrar-free
-      - ventoy-bin
+    name: "{{ aur_packages }}"
     state: present
     use: yay
   become: true

@@ -8,12 +8,6 @@
 
 - name: Install flatpaks
   community.general.flatpak:
-    name:
-      - com.discordapp.Discord
-      - com.github.tchx84.Flatseal
-      - com.slack.Slack
-      - com.spotify.Client
-      - com.valvesoftware.Steam
-      - com.valvesoftware.Steam.CompatibilityTool.Proton
+    name: "{{ flatpaks }}"
     state: present
   become: true

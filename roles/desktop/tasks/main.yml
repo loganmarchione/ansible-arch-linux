@@ -1,0 +1,43 @@
+---
+- name: Install desktop environment
+  block:
+    - name: Install Plasma
+      community.general.pacman:
+        name:
+          - plasma
+          - plasma-nm
+          - dolphin
+          - dolphin-plugins
+          - kate
+          - kcalc
+          - kde-system-meta
+          - kde-utilities-meta
+          - sddm
+          - spectacle
+        state: present
+      become: true
+
+    - name: Start systemd service - sddm.service
+      ansible.builtin.systemd:
+        name: sddm.service
+        state: started
+        enabled: yes
+      become: true
+  when: desktop == "kde"
+
+- name: Install desktop environment
+  block:
+    - name: Install Gnome
+      community.general.pacman:
+        name:
+          - gnome
+        state: present
+      become: true
+
+    - name: Start systemd service - gdm.service
+      ansible.builtin.systemd:
+        name: gdm.service
+        state: started
+        enabled: yes
+      become: true
+  when: desktop == "gnome"

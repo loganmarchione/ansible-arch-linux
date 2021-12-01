@@ -1,7 +1,135 @@
 ---
-git:
-  name: "Logan Marchione"
-  email: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
-
+#
+# User configuration
+#
 user:
   name: logan
+  full_name: "Logan Marchione"
+  group: users
+  shell: /bin/zsh
+  # See country list by running `reflector --list-countries`
+  country: "United States"
+
+git:
+  name: "{{ user['full_name'] }}"
+  email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
+  helper: "cache"
+
+#
+# Miscellaneous
+#
+
+# only AMD or Intel GPUs are currently supported
+# true or false
+install_gpu_drivers: true
+
+# desktop environment to install, only kde or gnome are currently supported
+desktop: kde
+
+# only AMD or Intel CPUs are currently supported
+# true or false
+install_microcode: true
+
+# how many parallel downloads to run at once
+pacman:
+  parallel_downloads: 10
+
+#
+# Packages
+#
+packages:
+  - bash
+  - bash-completion
+  - chromium
+  - code
+  - conky
+  - curl
+  - docker
+  - e2fsprogs
+  - filelight
+  - firefox
+  - flameshot
+  - flatpak
+  - fwupd
+  - gnupg
+  - gparted
+  - gvfs
+  - gvfs-smb
+  - gwenview
+  - hugo
+  - htop
+  - inkscape
+  - inetutils
+  - iotop
+  - iputils
+  - jq
+  - keepassxc
+  - libreoffice-fresh
+  - linux-firmware
+  - man
+  - man-db
+  - man-pages
+  - minicom
+  - ncdu
+  - neofetch
+  - networkmanager
+  - ntfs-3g
+  - openresolv
+  - openssh
+  - openvpn
+  - p7zip
+  - picocom
+  - pkgstats
+  - qbittorrent
+  - remmina
+  - rsync
+  - screen
+  - solaar
+  - sudo
+  - texmaker
+  - texlive-most
+  - thunar
+  - thunderbird
+  - tree
+  - usbutils
+  - unzip
+  - wget
+  - wireguard-tools
+  - vi
+  - vim
+  - vlc
+  - wpa_supplicant
+  - xfsprogs
+  - youtube-dl
+  - zip
+  - zsh
+  - zsh-completions
+  - zstd
+
+aur_packages:
+  - etcher-bin
+  - ledger-live-bin
+  - ledger-udev
+  - m64py
+  - unrar-free
+  - ventoy-bin
+
+flatpaks:
+  - com.discordapp.Discord
+  - com.github.tchx84.Flatseal
+  - com.slack.Slack
+  - com.spotify.Client
+  - com.valvesoftware.Steam
+  - com.valvesoftware.Steam.CompatibilityTool.Proton
+
+base_fonts:
+  - adobe-source-code-pro-fonts
+  - adobe-source-sans-pro-fonts
+  - adobe-source-serif-pro-fonts
+  - noto-fonts
+  - noto-fonts-emoji
+  - ttf-anonymous-pro
+  - ttf-dejavu
+  - otf-cascadia-code
+  - ttf-cascadia-code
+  - ttf-hack
