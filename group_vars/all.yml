@@ -5,7 +5,8 @@
 user:
   name: logan
   full_name: "Logan Marchione"
-  group: users
+  primary_group: users
+  additional_groups: wheel
   shell: /bin/zsh
   # See country list by running `reflector --list-countries`
   country: "United States"
@@ -33,6 +34,19 @@ install_microcode: true
 # how many parallel downloads to run at once
 pacman:
   parallel_downloads: 10
+
+#
+# Services
+#
+
+# if not using LVM, disable it
+# true or false
+disable_lvm: true
+
+# if not using systemd homed, disable it
+# true or false
+disable_systemd_homed: true
+
 
 #
 # Packages
@@ -133,3 +147,14 @@ base_fonts:
   - otf-cascadia-code
   - ttf-cascadia-code
   - ttf-hack
+
+vscode_extension_list:
+  - ms-python.python
+  - redhat.vscode-yaml
+  - redhat.ansible
+  - vscode-icons-team.vscode-icons
+  - HashiCorp.terraform
+  - arcticicestudio.nord-visual-studio-code
+  - donjayamanne.githistory
+  - eamodio.gitlens
+  - mhutchie.git-graph

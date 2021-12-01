@@ -26,7 +26,7 @@
   become: true
 
 - name: Detect scanner
-  ansible.builtin.shell: set -o pipefail && scanimage -L
+  ansible.builtin.shell: set -o pipefail && scanimage -L  # noqa command-instead-of-shell
   register: scanimage_result
   changed_when: no
 

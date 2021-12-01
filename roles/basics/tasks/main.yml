@@ -1,4 +1,11 @@
 ---
+- name: Start systemd service - systemd-timesyncd
+  ansible.builtin.systemd:
+    name: systemd-timesyncd
+    state: started
+    enabled: yes
+  become: true
+
 - name: Install packages
   community.general.pacman:
     name:
@@ -51,15 +58,6 @@
     group: root
     mode: 0644
   become: true
-
-- name: Update makepkg configuration file
-  ansible.builtin.template:
-    src: makepkg.conf
-    dest: "/home/{{ user.name }}/.makepkg.conf"
-    backup: no
-    owner: "{{ user.name }}"
-    group: "{{ user.group }}"
-    mode: 0644
 
 - name: Upgrade system
   community.general.pacman:

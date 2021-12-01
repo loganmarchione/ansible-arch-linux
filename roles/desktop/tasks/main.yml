@@ -6,10 +6,12 @@
         name:
           - plasma
           - plasma-nm
+          - ark
           - dolphin
           - dolphin-plugins
           - kate
           - kcalc
+          - konsole
           - kde-system-meta
           - kde-utilities-meta
           - sddm
