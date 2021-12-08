@@ -62,6 +62,16 @@
     mode: 0644
   become: true
 
+- name: Install systemd pacman hook
+  ansible.builtin.template:
+    src: systemd-boot.hook
+    dest: /etc/pacman.d/hooks/systemd-boot.hook
+    backup: no
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+
 - name: Upgrade system
   community.general.pacman:
     update_cache: yes

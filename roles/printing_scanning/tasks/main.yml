@@ -1,7 +1,7 @@
 ---
 - name: Install printing and scanning packages
   community.general.pacman:
-    name: "{{ printing_packages }}"
+    name: "{{ printing_scanning_packages }}"
   become: true
 
 - name: Install printing and scanning packages (AUR)

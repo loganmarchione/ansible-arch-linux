@@ -18,4 +18,4 @@ Ansible playbook to setup my Arch Linux desktop (i.e., meant to be run against l
 1. Run the playbook `ansible-playbook main.yml --ask-become-pass` (enter your user's password when prompted)
 
 ## TODO
-- [ ] Add reflector pacman hook
+- [X] Add reflector pacman hook

@@ -55,7 +55,6 @@ disable_lvm: true
 # true or false
 disable_systemd_homed: true
 
-
 #
 # Packages
 #
