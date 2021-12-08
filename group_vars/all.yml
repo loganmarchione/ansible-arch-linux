@@ -31,9 +31,17 @@ desktop: kde
 # true or false
 install_microcode: true
 
+# whether to detect the scanner or not
+# true or false
+detect_scanner: true
+
 # how many parallel downloads to run at once
 pacman:
   parallel_downloads: 10
+
+# set aur helper
+# supported helpers are here https://github.com/kewlfft/ansible-aur#kewlfftauraur-module
+aur_helper: yay
 
 #
 # Services
@@ -158,3 +166,14 @@ vscode_extension_list:
   - donjayamanne.githistory
   - eamodio.gitlens
   - mhutchie.git-graph
+
+printing_scanning_packages:
+  - cups
+  - cups-pdf
+  - sane
+  - sane-airscan
+  - simple-scan
+
+printing_scanning_aur_packages:
+  - brlaser-git
+  - brscan4
