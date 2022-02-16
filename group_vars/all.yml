@@ -98,7 +98,6 @@ packages:
   - openresolv
   - openssh
   - openvpn
-  - p7zip
   - picocom
   - pkgstats
   - qbittorrent
@@ -128,6 +127,7 @@ packages:
   - zstd
 
 aur_packages:
+  - 7-zip-bin
   - etcher-bin
   - ledger-live-bin
   - ledger-udev
