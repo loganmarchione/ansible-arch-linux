@@ -157,6 +157,7 @@ base_fonts:
 
 vscode_extension_list:
   - ms-python.python
+  - ms-azuretools.vscode-docker
   - redhat.vscode-yaml
   - redhat.ansible
   - vscode-icons-team.vscode-icons
