@@ -4,18 +4,10 @@
     - name: Install Plasma
       community.general.pacman:
         name:
-          - plasma
-          - plasma-nm
-          - ark
-          - dolphin
-          - dolphin-plugins
-          - kate
-          - kcalc
-          - konsole
-          - kde-system-meta
+          - plasma-meta
+          - kde-applications-meta
           - kde-utilities-meta
           - sddm
-          - spectacle
         state: present
       become: true
 
