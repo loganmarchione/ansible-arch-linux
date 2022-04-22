@@ -31,6 +31,7 @@
           - mesa
           - vulkan-intel
           - xf86-video-intel
+          - intel-media-driver
         state: present
       become: true
       when: "'Intel' in gpu_result.stdout"
