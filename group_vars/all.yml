@@ -63,7 +63,6 @@ packages:
   - bash-completion
   - chromium
   - code
-  - conky
   - curl
   - docker
   - e2fsprogs
