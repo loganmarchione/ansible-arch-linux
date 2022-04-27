@@ -5,6 +5,7 @@
       community.general.pacman:
         name:
           - plasma-meta
+          - plasma-wayland-session
           - kde-applications-meta
           - kde-utilities-meta
           - sddm
