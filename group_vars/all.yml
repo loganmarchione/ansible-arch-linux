@@ -61,10 +61,12 @@ disable_systemd_homed: true
 packages:
   - bash
   - bash-completion
+  - cadaver
   - chromium
   - code
   - curl
   - docker
+  - docker-compose
   - e2fsprogs
   - firefox
   - flameshot
@@ -79,6 +81,7 @@ packages:
   - inkscape
   - inetutils
   - iotop
+  - iperf3
   - iputils
   - jq
   - keepassxc
@@ -110,11 +113,11 @@ packages:
   - tree
   - usbutils
   - unzip
-  - wget
-  - wireguard-tools
   - vi
   - vim
   - vlc
+  - wget
+  - wireguard-tools
   - wpa_supplicant
   - xfsprogs
   - youtube-dl
@@ -125,10 +128,13 @@ packages:
 
 aur_packages:
   - 7-zip-bin
+  - brave-bin
   - etcher-bin
   - ledger-live-bin
   - ledger-udev
   - m64py
+  - rpi-imager-bin
+  - svgo
   - unrar-free
   - ventoy-bin
 
