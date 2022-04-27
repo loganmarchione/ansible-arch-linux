@@ -3,6 +3,7 @@
   community.general.pacman:
     name:
       - xorg-server
+      - xorg-xwayland
     state: present
   become: true
 
