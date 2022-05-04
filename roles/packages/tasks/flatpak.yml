@@ -10,4 +10,9 @@
   community.general.flatpak:
     name: "{{ flatpaks }}"
     state: present
+    remote: flathub
   become: true
+
+- name: Override theme
+  ansible.builtin.shell: flatpak override --user --env=GTK_THEME=Adwaita:dark com.github.tchx84.Flatseal  # noqa command-instead-of-shell
+  changed_when: no
