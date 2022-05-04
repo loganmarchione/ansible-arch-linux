@@ -145,6 +145,9 @@ flatpaks:
   - com.spotify.Client
   - com.valvesoftware.Steam
   - com.valvesoftware.Steam.CompatibilityTool.Proton
+  - org.gtk.Gtk3theme.Adwaita-dark
+  - org.gtk.Gtk3theme.Yaru-dark
+  - org.gtk.Gtk3theme.Yaru-light
 
 base_fonts:
   - adobe-source-code-pro-fonts
