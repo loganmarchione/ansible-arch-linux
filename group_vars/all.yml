@@ -99,6 +99,8 @@ packages:
   - openssh
   - openvpn
   - picocom
+  - pipewire
+  - pipewire-pulse
   - pkgstats
   - qbittorrent
   - remmina
