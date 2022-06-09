@@ -7,7 +7,6 @@
           - plasma-meta
           - plasma-wayland-session
           - kde-applications-meta
-          - kde-utilities-meta
           - sddm
         state: present
       become: true
