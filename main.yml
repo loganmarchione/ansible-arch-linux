@@ -1,11 +1,11 @@
 ---
 - hosts: all
   roles:
-    - host_info
-    - basics
-    - x
-    - desktop
-    - packages
-    - microcode
-    - printing_scanning
-    - users
+    - 01_host_info
+    - 02_basics
+    - 03_x
+    - 04_desktop
+    - 05_packages
+    - 06_microcode
+    - 07_printing_scanning
+    - 08_users
