@@ -131,7 +131,6 @@ packages:
 
 aur_packages:
   - 7-zip-bin
-  - brave-bin
   - etcher-bin
   - ledger-live-bin
   - ledger-udev
