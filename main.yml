@@ -1,11 +1,12 @@
 ---
 - hosts: all
   roles:
-    - 01_host_info
-    - 02_basics
-    - 03_x
-    - 04_desktop
-    - 05_packages
-    - 06_microcode
-    - 07_printing_scanning
-    - 08_users
+    - { role: 01_host_info }
+    - { role: 02_basics }
+    - { role: 03_x }
+    - { role: 04_desktop }
+    - { role: 05_packages }
+    - { role: 06_microcode }
+    - { role: 07_printing_scanning }
+    - { role: 08_users }
+    - { role: 09_bluetooth, when: enable_bluetooth }

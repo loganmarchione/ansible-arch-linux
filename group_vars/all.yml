@@ -37,6 +37,10 @@ install_microcode: true
 # true or false
 detect_scanner: true
 
+# whether to enable bluetooth or not
+# true or false
+enable_bluetooth: false
+
 # how many parallel downloads to run at once
 pacman:
   parallel_downloads: 10
