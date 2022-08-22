@@ -10,3 +10,4 @@
     - { role: 07_users }
     - { role: 08_printing_scanning, when: enable_printing }
     - { role: 09_bluetooth, when: enable_bluetooth }
+    - { role: 10_laptop, when: laptop }

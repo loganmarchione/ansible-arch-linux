@@ -1,0 +1,25 @@
+---
+- name: Install power management packages
+  community.general.pacman:
+    name:
+      - powertop
+      - tlp
+      - tlp-rdw
+    state: present
+  become: true
+
+- name: Mask systemd services - rfkill
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    masked: yes
+  become: true
+  with_items:
+    - systemd-rfkill.service
+    - systemd-rfkill.socket
+
+- name: Start systemd service - tlp.service
+  ansible.builtin.systemd:
+    name: tlp.service
+    state: started
+    enabled: yes
+  become: true

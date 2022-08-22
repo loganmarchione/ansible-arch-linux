@@ -45,6 +45,10 @@ detect_scanner: true
 # true or false
 enable_bluetooth: false
 
+# whether to install laptop tools
+# true or false
+laptop: false
+
 # how many parallel downloads to run at once
 pacman:
   parallel_downloads: 10
