@@ -14,6 +14,7 @@ user:
 git:
   name: "{{ user['full_name'] }}"
   email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
+  # can be "cache", "store", "osxkeychain", or "manager"
   helper: "cache"
 
 #
@@ -24,7 +25,8 @@ git:
 # true or false
 install_gpu_drivers: true
 
-# desktop environment to install, only kde or gnome are currently supported
+# desktop environment to install
+# "kde" or "gnome"
 desktop: kde
 
 # only AMD or Intel CPUs are currently supported
