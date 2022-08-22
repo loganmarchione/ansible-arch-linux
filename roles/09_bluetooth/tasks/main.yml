@@ -1,5 +1,5 @@
 ---
-- name: Install packages
+- name: Install bluetooth packages
   community.general.pacman:
     name:
       - bluez
