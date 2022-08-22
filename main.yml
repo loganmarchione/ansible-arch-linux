@@ -7,6 +7,6 @@
     - { role: 04_desktop }
     - { role: 05_packages }
     - { role: 06_microcode }
-    - { role: 07_printing_scanning }
-    - { role: 08_users }
+    - { role: 07_users }
+    - { role: 08_printing_scanning }
     - { role: 09_bluetooth, when: enable_bluetooth }
