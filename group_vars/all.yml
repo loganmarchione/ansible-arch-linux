@@ -133,6 +133,7 @@ packages:
   - vlc
   - wget
   - wireguard-tools
+  - wireplumber
   - wpa_supplicant
   - xfsprogs
   - youtube-dl
