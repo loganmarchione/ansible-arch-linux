@@ -27,12 +27,6 @@
     scope: global
     value: "{{ git.helper }}"
 
-- name: Git config credential helper
-  git_config:
-    name: credential.helper
-    scope: global
-    value: "cache"
-
 - name: Install VS Code extensions
   ansible.builtin.shell: code --install-extension {{ item }}  # noqa command-instead-of-shell
   with_items: "{{ vscode_extension_list }}"
