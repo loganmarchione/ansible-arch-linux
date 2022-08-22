@@ -6,7 +6,13 @@
         name:
           - plasma-meta
           - plasma-wayland-session
-          - kde-applications-meta
+          - kde-graphics-meta
+          - kde-multimedia-meta
+          - kde-network-meta
+          - kde-pim-meta
+          - kde-sdk-meta
+          - kde-system-meta
+          - kde-utilities-meta
           - sddm
         state: present
       become: true
