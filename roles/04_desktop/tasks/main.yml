@@ -25,6 +25,7 @@
       community.general.pacman:
         name:
           - gnome
+          - gdm
         state: present
       become: true
 
