@@ -110,6 +110,8 @@ packages:
   - ncdu
   - neofetch
   - networkmanager
+  - nextcloud-client
+  - nextcloud-client-cloudproviders
   - ntfs-3g
   - openresolv
   - openssh
