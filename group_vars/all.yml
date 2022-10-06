@@ -101,6 +101,7 @@ packages:
   - iputils
   - jq
   - keepassxc
+  - kubectl
   - libreoffice-fresh
   - linux-firmware
   - man
