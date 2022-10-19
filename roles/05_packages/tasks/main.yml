@@ -12,4 +12,4 @@
   ansible.builtin.import_tasks: aur.yml
 
 - name: Install flatpaks
-- ansible.builtin.import_tasks: flatpak.yml
+  ansible.builtin.import_tasks: flatpak.yml
