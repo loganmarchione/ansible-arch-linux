@@ -32,6 +32,8 @@
       community.general.pacman:
         name:
           - gnome
+          - gnome-shell
+          - gnome-control-center
           - gdm
         state: present
       become: true
