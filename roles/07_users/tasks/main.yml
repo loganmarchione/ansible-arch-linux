@@ -10,19 +10,19 @@
   become: true
 
 - name: Git config name
-  git_config:
+  community.general.git_config:
     name: user.name
     scope: global
     value: "{{ git.name }}"
 
 - name: Git config email
-  git_config:
+  community.general.git_config:
     name: user.email
     scope: global
     value: "{{ git.email_b64 | b64decode }}"
 
 - name: Git config credential helper
-  git_config:
+  community.general.git_config:
     name: credential.helper
     scope: global
     value: "{{ git.helper }}"

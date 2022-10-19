@@ -5,6 +5,11 @@
     state: present
   become: true
 
-- import_tasks: fonts.yml
-- import_tasks: aur.yml
-- import_tasks: flatpak.yml
+- name: Install font packages
+  ansible.builtin.import_tasks: fonts.yml
+
+- name: Install aur packages
+  ansible.builtin.import_tasks: aur.yml
+
+- name: Install flatpaks
+- ansible.builtin.import_tasks: flatpak.yml
