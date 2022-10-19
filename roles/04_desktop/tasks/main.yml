@@ -1,5 +1,6 @@
 ---
 - name: Install desktop environment
+  when: desktop == "kde"
   block:
     - name: Install Plasma
       community.general.pacman:
@@ -23,9 +24,9 @@
         state: started
         enabled: yes
       become: true
-  when: desktop == "kde"
 
 - name: Install desktop environment
+  when: desktop == "gnome"
   block:
     - name: Install Gnome
       community.general.pacman:
@@ -41,4 +42,3 @@
         state: started
         enabled: yes
       become: true
-  when: desktop == "gnome"

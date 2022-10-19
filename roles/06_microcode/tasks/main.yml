@@ -1,5 +1,6 @@
 ---
 - name: Install microcode
+  when: install_microcode
   block:
     - name: Install microcode (AMD)
       community.general.pacman:
@@ -22,4 +23,3 @@
           "https://wiki.archlinux.org/title/microcode"
           "Press [ENTER] to continue"
         echo: no
-  when: install_microcode

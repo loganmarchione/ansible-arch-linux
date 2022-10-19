@@ -13,6 +13,7 @@
   changed_when: no
 
 - name: Install GPU drivers
+  when: install_gpu_drivers
   block:
     - name: Install GPU drivers (AMD)
       community.general.pacman:
@@ -36,4 +37,3 @@
         state: present
       become: true
       when: "'Intel' in gpu_result.stdout"
-  when: install_gpu_drivers
