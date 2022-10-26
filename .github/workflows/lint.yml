@@ -1,3 +1,4 @@
+---
 name: Lint
 
 on:
@@ -18,25 +19,25 @@ jobs:
         python-version: ['3.7', '3.8', '3.9', '3.10']
 
     steps:
-    - name: Check out the codebase
-      uses: actions/checkout@v3
+      - name: Check out the codebase
+        uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Display Python version
-      run: python -c "import sys; print(sys.version)"
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install ansible ansible-lint[yamllint] yamllint
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible ansible-lint[yamllint] yamllint
 
-    - name: Lint
-      run: |
-        yamllint --version
-        ansible-lint --version
-        yamllint --format parsable .
-        ansible-lint main.yml
+      - name: Lint
+        run: |
+          yamllint --version
+          ansible-lint --version
+          yamllint --format parsable .
+          ansible-lint main.yml
