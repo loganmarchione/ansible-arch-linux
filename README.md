@@ -17,7 +17,8 @@ Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against 
    ```
 1. Clone this repo
    ```
-   git clone https://github.com/loganmarchione/ansible-arch-linux.git && cd ansible-arch-linux
+   git clone https://github.com/loganmarchione/ansible-arch-linux.git
+   cd ansible-arch-linux
    ```
 1. Install the Ansible requirements
    ```
