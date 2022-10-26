@@ -1,25 +1,22 @@
 ---
-- name: Install microcode
-  when: install_microcode
-  block:
-    - name: Install microcode (AMD)
-      community.general.pacman:
-        name:
-          - amd-ucode
-      become: true
-      when: "'AuthenticAMD' in ansible_processor"
+- name: Install microcode (AMD)
+  community.general.pacman:
+    name:
+      - amd-ucode
+  become: true
+  when: "'AuthenticAMD' in ansible_processor"
 
-    - name: Install microcode (Intel)
-      community.general.pacman:
-        name:
-          - intel-ucode
-      become: true
-      when: "'GenuineIntel' in ansible_processor"
+- name: Install microcode (Intel)
+  community.general.pacman:
+    name:
+      - intel-ucode
+  become: true
+  when: "'GenuineIntel' in ansible_processor"
 
-    - name: Microcode bootloader reminder
-      ansible.builtin.pause:
-        prompt: |
-          "This is a reminder that you need to configure your bootloader for microcode"
-          "https://wiki.archlinux.org/title/microcode"
-          "Press [ENTER] to continue"
-        echo: no
+- name: Microcode bootloader reminder
+  ansible.builtin.pause:
+    prompt: |
+      "This is a reminder that you need to configure your bootloader for microcode"
+      "https://wiki.archlinux.org/title/microcode"
+      "Press [ENTER] to continue"
+    echo: no
