@@ -27,10 +27,6 @@ git:
 # Miscellaneous
 #
 
-# only AMD or Intel GPUs are currently supported
-# true or false
-install_gpu_drivers: true
-
 # desktop environment to install
 # "kde" or "gnome"
 desktop: kde
