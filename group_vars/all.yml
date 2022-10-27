@@ -18,6 +18,10 @@ git:
   email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
   # can be "cache", "store", "osxkeychain", or "manager"
   helper: "cache"
+  # can be "true" or "false"
+  rebase: "true"
+  # see this https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---color-movedltmodegt
+  colorMoved: "zebra"
 
 #
 # Miscellaneous

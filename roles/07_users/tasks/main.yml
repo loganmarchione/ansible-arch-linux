@@ -9,23 +9,35 @@
     state: present
   become: true
 
-- name: Git config name
+- name: Git config user.name
   community.general.git_config:
     name: user.name
     scope: global
     value: "{{ git.name }}"
 
-- name: Git config email
+- name: Git config user.email
   community.general.git_config:
     name: user.email
     scope: global
     value: "{{ git.email_b64 | b64decode }}"
 
-- name: Git config credential helper
+- name: Git config credential.helper
   community.general.git_config:
     name: credential.helper
     scope: global
     value: "{{ git.helper }}"
+
+- name: Git config pull.rebase
+  community.general.git_config:
+    name: pull.rebase
+    scope: global
+    value: "{{ git.rebase }}"
+
+- name: Git config diff.colorMoved
+  community.general.git_config:
+    name: diff.colorMoved
+    scope: global
+    value: "{{ git.colorMoved }}"
 
 - name: Install VS Code extensions
   ansible.builtin.shell: code --install-extension {{ item }}  # noqa command-instead-of-shell
