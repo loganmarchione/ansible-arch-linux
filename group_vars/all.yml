@@ -156,6 +156,7 @@ aur_packages:
   - etcher-bin
   - ledger-live-bin
   - ledger-udev
+  - mullvad-vpn-bin
   - m64py
   - rpi-imager-bin
   - svgo
