@@ -2,7 +2,6 @@
 - name: Installing AUR helper
   kewlfft.aur.aur:
     name: "{{ aur_helper }}"
-  become: true
 
 - name: Install AUR packages
   kewlfft.aur.aur:
