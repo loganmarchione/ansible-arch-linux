@@ -21,7 +21,6 @@
     - name: Start systemd service - sddm.service
       ansible.builtin.systemd:
         name: sddm.service
-        state: started
         enabled: yes
       become: true
 
@@ -41,6 +40,5 @@
     - name: Start systemd service - gdm.service
       ansible.builtin.systemd:
         name: gdm.service
-        state: started
         enabled: yes
       become: true
