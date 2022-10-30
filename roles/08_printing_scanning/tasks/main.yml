@@ -9,7 +9,6 @@
     name: "{{ printing_scanning_aur_packages }}"
     state: present
     use: "{{ aur_helper }}"
-  become: true
 
 - name: Start systemd service - cups.socket
   ansible.builtin.systemd:
