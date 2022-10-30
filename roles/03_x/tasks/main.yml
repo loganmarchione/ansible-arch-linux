@@ -21,7 +21,7 @@
       - xf86-video-amdgpu
     state: present
   become: true
-  when: "'Radeon' in gpu_result.stdout"
+  when: ("'Radeon' in gpu_result.stdout") or (("'AMD/ATI' in gpu_result.stdout"))
 
 - name: Install GPU drivers (Intel)
   community.general.pacman:
