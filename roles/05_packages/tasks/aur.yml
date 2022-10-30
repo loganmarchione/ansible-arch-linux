@@ -8,4 +8,3 @@
     name: "{{ aur_packages }}"
     state: present
     use: "{{ aur_helper }}"
-  become: true
