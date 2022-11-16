@@ -173,6 +173,7 @@ flatpaks:
   - org.gtk.Gtk3theme.Adwaita-dark
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
+  - us.zoom.Zoom
 
 base_fonts:
   - adobe-source-code-pro-fonts
