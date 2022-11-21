@@ -195,6 +195,7 @@ vscode_extension_list:
   - vscode-icons-team.vscode-icons
   - HashiCorp.terraform
   - arcticicestudio.nord-visual-studio-code
+  - dracula-theme.theme-dracula
   - donjayamanne.githistory
   - eamodio.gitlens
   - mhutchie.git-graph
