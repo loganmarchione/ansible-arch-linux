@@ -194,6 +194,7 @@ vscode_extension_list:
   - redhat.ansible
   - vscode-icons-team.vscode-icons
   - HashiCorp.terraform
+  - golang.go
   - arcticicestudio.nord-visual-studio-code
   - dracula-theme.theme-dracula
   - donjayamanne.githistory
