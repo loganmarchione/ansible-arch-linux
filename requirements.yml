@@ -1,4 +1,8 @@
 ---
 collections:
-  - community.general
-  - kewlfft.aur
+  - name: community.general
+    version: 6.3.0
+    source: https://galaxy.ansible.com
+  - name: kewlfft.aur
+    version: 0.10.0
+    source: https://galaxy.ansible.com
