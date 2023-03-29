@@ -6,7 +6,7 @@ user:
   name: logan
   full_name: "Logan Marchione"
   primary_group: users
-  additional_groups: wheel
+  additional_groups: docker,vboxusers,wheel
   # /bin/bash or /bin/zsh
   shell: /bin/zsh
   # See country list by running `reflector --list-countries`
@@ -137,8 +137,11 @@ packages:
   - tree
   - usbutils
   - unzip
+  - vagrant
   - vi
   - vim
+  - virtualbox
+  - virtualbox-host-modules-arch
   - vlc
   - wget
   - wireguard-tools
