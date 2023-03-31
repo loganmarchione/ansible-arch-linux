@@ -95,7 +95,6 @@ packages:
   - gparted
   - gvfs
   - gvfs-smb
-  - hugo
   - htop
   - inkscape
   - inetutils
@@ -131,7 +130,7 @@ packages:
   - solaar
   - sudo
   - texmaker
-  - texlive-most
+  - texlive-latexextra
   - thunar
   - thunderbird
   - tree
@@ -157,13 +156,14 @@ packages:
 aur_packages:
   - 7-zip-bin
   - etcher-bin
+  - joplin-appimage
   - ledger-live-bin
   - ledger-udev
   - mullvad-vpn-bin
-  - m64py
   - rpi-imager-bin
   - svgo
   - unrar-free
+  - variety-git
   - ventoy-bin
 
 flatpaks:
@@ -196,6 +196,7 @@ vscode_extension_list:
   - redhat.vscode-yaml
   - redhat.ansible
   - vscode-icons-team.vscode-icons
+  - HashiCorp.HCL
   - HashiCorp.terraform
   - golang.go
   - arcticicestudio.nord-visual-studio-code
