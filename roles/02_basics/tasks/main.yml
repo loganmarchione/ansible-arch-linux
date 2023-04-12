@@ -11,6 +11,7 @@
     name:
       - reflector
       - pacman-contrib
+      - xdg-desktop-portal
       - xdg-user-dirs
     state: present
   become: true
