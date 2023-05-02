@@ -39,6 +39,38 @@
     scope: global
     value: "{{ git.colorMoved }}"
 
+- name: Install Oh My Zsh
+  ansible.builtin.git:
+    repo: 'https://github.com/ohmyzsh/ohmyzsh.git'
+    dest: "/home/{{ user.name }}/.oh-my-zsh"
+    clone: yes
+    update: yes
+    version: master
+    depth: 1
+
+- name: Set permissions for ~/.oh-my-zsh
+  ansible.builtin.file:
+    path: "/home/{{ user.name }}/.oh-my-zsh"
+    owner: "{{ user.name }}"
+    group: "{{ user.primary_group }}"
+    mode: 0750
+
+- name: Install Powerlevel10k theme
+  ansible.builtin.git:
+    repo: 'https://github.com/romkatv/powerlevel10k.git'
+    dest: "/home/{{ user.name }}/.oh-my-zsh/custom/themes/powerlevel10k"
+    clone: yes
+    update: yes
+    version: master
+    depth: 1
+
+- name: Set permissions for Powerlevel10k
+  ansible.builtin.file:
+    path: '/home/{{ user.name }}/.oh-my-zsh/custom/themes/powerlevel10k'
+    owner: "{{ user.name }}"
+    group: "{{ user.primary_group }}"
+    mode: 0750
+
 - name: Install VS Code extensions
   ansible.builtin.shell: code --install-extension {{ item }}  # noqa command-instead-of-shell
   with_items: "{{ vscode_extension_list }}"
@@ -52,6 +84,7 @@
     owner: "{{ user.name }}"
     group: "{{ user.primary_group }}"
   with_items:
+    - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.aliases', dest: '/home/logan/.aliases' }
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.zshrc', dest: '/home/logan/.zshrc' }
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.vimrc', dest: '/home/logan/.vimrc' }
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.bashrc', dest: '/home/logan/.bashrc' }
