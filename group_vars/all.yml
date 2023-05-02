@@ -91,6 +91,8 @@ packages:
   - flameshot
   - flatpak
   - fwupd
+  - fzf
+  - git
   - gnupg
   - gparted
   - gvfs
@@ -187,6 +189,7 @@ base_fonts:
   - adobe-source-serif-pro-fonts
   - noto-fonts
   - noto-fonts-emoji
+  - powerline-fonts
   - ttf-anonymous-pro
   - ttf-dejavu
   - otf-cascadia-code
