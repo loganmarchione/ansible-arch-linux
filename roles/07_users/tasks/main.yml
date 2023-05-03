@@ -85,9 +85,10 @@
     group: "{{ user.primary_group }}"
   with_items:
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.aliases', dest: '/home/logan/.aliases' }
-    - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.zshrc', dest: '/home/logan/.zshrc' }
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.vimrc', dest: '/home/logan/.vimrc' }
     - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.bashrc', dest: '/home/logan/.bashrc' }
+    - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.zshrc', dest: '/home/logan/.zshrc' }
+    - { src: 'https://raw.githubusercontent.com/loganmarchione/dotfiles/main/.p10k.zsh', dest: '/home/logan/.p10k.zsh' }
 
 - name: Update makepkg configuration file
   ansible.builtin.template:
