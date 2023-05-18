@@ -8,7 +8,7 @@
 
 - name: Detect GPU
   ansible.builtin.shell: set -o pipefail && lspci -v | grep -A1 -e VGA -e 3D  # noqa command-instead-of-shell
-  register: gpu_result
+  register: 03_x_gpu_result
   changed_when: no
 
 - name: Install GPU drivers (AMD)
@@ -21,7 +21,7 @@
       - xf86-video-amdgpu
     state: present
   become: true
-  when: ("'Radeon' in gpu_result.stdout") or (("'AMD/ATI' in gpu_result.stdout"))
+  when: ("'Radeon' in 03_x_gpu_result.stdout") or (("'AMD/ATI' in 03_x_gpu_result.stdout"))
 
 - name: Install GPU drivers (Intel)
   community.general.pacman:
@@ -33,4 +33,4 @@
       - xf86-video-intel
     state: present
   become: true
-  when: "'Intel' in gpu_result.stdout"
+  when: "'Intel' in 03_x_gpu_result.stdout"
