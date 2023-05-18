@@ -19,7 +19,7 @@
 
 - name: Detect scanner
   ansible.builtin.shell: set -o pipefail && scanimage -L  # noqa command-instead-of-shell
-  register: 08_printing_scanning_scanimage_result
+  register: scanimage_result
   changed_when: no
   when: detect_scanner
 
@@ -27,5 +27,5 @@
   ansible.builtin.debug:
     msg:
       - "Detected the scanner below"
-      - "{{ 08_printing_scanning_scanimage_result.stdout }}"
+      - "{{ scanimage_result.stdout }}"
   when: detect_scanner
