@@ -1,4 +1,4 @@
-ansible==7.6.0
+ansible==8.0.0
 ansible-lint==6.16.2
 argcomplete==3.0.8
 PyYAML==6.0
