@@ -4,3 +4,4 @@ enable_list:
 warn_list:
   - role-name
   - var-naming
+  - yaml[truthy]
