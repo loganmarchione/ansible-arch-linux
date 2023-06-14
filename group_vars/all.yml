@@ -173,13 +173,13 @@ flatpaks:
   - com.spotify.Client
   - com.valvesoftware.Steam
   - com.valvesoftware.Steam.CompatibilityTool.Proton
-  - org.freedesktop.Platform.ffmpeg-full/x86_64/22.08
-  - org.libreoffice.LibreOffice
   - info.beyondallreason.bar
+  - org.freedesktop.Platform.ffmpeg-full/x86_64/22.08
   - org.gimp.GIMP
   - org.gtk.Gtk3theme.Adwaita-dark
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
+  - org.libreoffice.LibreOffice
   - us.zoom.Zoom
   # See other themes here
   # flatpak remote-ls flathub | grep org.gtk.Gtk3theme
