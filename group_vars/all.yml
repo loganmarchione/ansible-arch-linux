@@ -105,7 +105,6 @@ packages:
   - jq
   - keepassxc
   - kubectl
-  - libreoffice-fresh
   - linux-firmware
   - man
   - man-db
@@ -175,6 +174,7 @@ flatpaks:
   - com.valvesoftware.Steam
   - com.valvesoftware.Steam.CompatibilityTool.Proton
   - org.freedesktop.Platform.ffmpeg-full/x86_64/22.08
+  - org.libreoffice.LibreOffice
   - info.beyondallreason.bar
   - org.gimp.GIMP
   - org.gtk.Gtk3theme.Adwaita-dark
