@@ -11,4 +11,3 @@
     name: "{{ flatpaks }}"
     state: present
     remote: flathub
-
