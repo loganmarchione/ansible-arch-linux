@@ -124,7 +124,6 @@ packages:
   - pipewire-alsa
   - pkgstats
   - qbittorrent
-  - remmina
   - rsync
   - screen
   - solaar
@@ -147,6 +146,8 @@ packages:
   - wireguard-tools
   - wireplumber
   - wpa_supplicant
+  # Needed for GTK apps that run as Flatpaks
+  - xdg-desktop-portal-gtk
   - xfsprogs
   - youtube-dl
   - zip
@@ -180,6 +181,7 @@ flatpaks:
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
   - org.libreoffice.LibreOffice
+  - org.remmina.Remmina
   - us.zoom.Zoom
   # See other themes here
   # flatpak remote-ls flathub | grep org.gtk.Gtk3theme
