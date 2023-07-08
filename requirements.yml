@@ -4,5 +4,5 @@ collections:
     version: 7.1.0
     source: https://galaxy.ansible.com
   - name: kewlfft.aur
-    version: 0.10.0
+    version: 0.11.1
     source: https://galaxy.ansible.com
