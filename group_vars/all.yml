@@ -131,7 +131,6 @@ packages:
   - texmaker
   - texlive-latexextra
   - thunar
-  - thunderbird
   - tree
   - usbutils
   - unrar-free
@@ -181,6 +180,7 @@ flatpaks:
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
   - org.libreoffice.LibreOffice
+  - org.mozilla.Thunderbird
   - org.remmina.Remmina
   - us.zoom.Zoom
   # See other themes here
