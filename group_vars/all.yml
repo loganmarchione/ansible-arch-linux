@@ -160,6 +160,7 @@ aur_packages:
   - joplin-appimage
   - ledger-live-bin
   - ledger-udev
+  - makemkv
   - mullvad-vpn-bin
   - rpi-imager-bin
   - svgo
@@ -175,6 +176,7 @@ flatpaks:
   - com.valvesoftware.Steam.CompatibilityTool.Proton
   - fr.handbrake.ghb
   - info.beyondallreason.bar
+  - org.bunkus.mkvtoolnix-gui
   - org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
   - org.freedesktop.Platform.openh264/x86_64/2.3.0
   - org.gimp.GIMP
