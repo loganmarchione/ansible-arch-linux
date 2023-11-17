@@ -195,7 +195,9 @@ base_fonts:
   - adobe-source-code-pro-fonts
   - adobe-source-sans-pro-fonts
   - adobe-source-serif-pro-fonts
+  - gnu-free-fonts
   - noto-fonts
+  - noto-fonts-cjk
   - noto-fonts-emoji
   - powerline-fonts
   - ttf-anonymous-pro
