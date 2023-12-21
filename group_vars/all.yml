@@ -6,7 +6,7 @@ user:
   name: logan
   full_name: "Logan Marchione"
   primary_group: users
-  additional_groups: docker,vboxusers,wheel
+  additional_groups: docker,wheel
   # /bin/bash or /bin/zsh
   shell: /bin/zsh
   # See country list by running `reflector --list-countries`
