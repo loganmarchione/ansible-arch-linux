@@ -1,5 +1,5 @@
 ansible==9.1.0
 ansible-lint==6.22.2
-argcomplete==3.2.1
+argcomplete==3.2.2
 PyYAML==6.0.1
 yamllint==1.33.0
