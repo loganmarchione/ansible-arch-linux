@@ -155,8 +155,6 @@ aur_packages:
   - 7-zip-bin
   - etcher-bin
   - joplin-appimage
-  - ledger-live-bin
-  - ledger-udev
   - makemkv
   - mullvad-vpn-bin
   - rpi-imager-bin
