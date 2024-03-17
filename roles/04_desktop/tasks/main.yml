@@ -6,7 +6,7 @@
       community.general.pacman:
         name:
           - plasma-meta
-          - plasma-wayland-session
+          - plasma-workspace
           - kde-graphics-meta
           - kde-multimedia-meta
           - kde-network-meta
