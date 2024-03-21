@@ -99,6 +99,7 @@ packages:
   - gvfs-gphoto2
   - gvfs-smb
   - htop
+  - ifuse
   - inkscape
   - inetutils
   - iotop
