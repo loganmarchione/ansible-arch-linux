@@ -75,9 +75,9 @@ disable_systemd_homed: true
 # Packages
 #
 packages:
-  - alsa-utils
-  - alsa-plugins
   - alsa-firmware
+  - alsa-plugins
+  - alsa-utils
   - bash
   - bash-completion
   - cadaver
@@ -136,9 +136,9 @@ packages:
   - texlive-latexextra
   - thunar
   - tree
-  - usbutils
   - unrar-free
   - unzip
+  - usbutils
   - vi
   - vim
   - vlc
