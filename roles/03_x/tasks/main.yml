@@ -7,7 +7,8 @@
   become: true
 
 - name: Detect GPU
-  ansible.builtin.shell: set -o pipefail && lspci -v | grep -A1 -e VGA -e 3D  # noqa command-instead-of-shell
+  # ansible.builtin.shell: set -o pipefail && lspci -v | grep -A1 -e VGA -e 3D  # noqa command-instead-of-shell
+  ansible.builtin.shell: set -o pipefail && lspci | grep -i 'VGA\|3D\|display'  # noqa command-instead-of-shell
   register: gpu_result
   changed_when: no
 
@@ -15,10 +16,15 @@
   community.general.pacman:
     name:
       - mesa
+      - mesa-utils
+      # https://wiki.archlinux.org/title/Xorg
+      - xf86-video-amdgpu
+      # https://wiki.archlinux.org/title/Hardware_video_acceleration
       - mesa-vdpau
       - libva-mesa-driver
+      # https://wiki.archlinux.org/title/Vulkan
       - vulkan-radeon
-      - xf86-video-amdgpu
+      # https://wiki.archlinux.org/title/GPGPU
       - rocm-hip-runtime
       - rocm-hip-sdk
       - hip-runtime-amd
@@ -27,16 +33,39 @@
       - rocm-opencl-sdk
     state: present
   become: true
-  when: ("'Radeon' in gpu_result.stdout") or (("'AMD/ATI' in gpu_result.stdout"))
+  when: ("'radeon' in gpu_result.stdout.lower()") or ("'amd/ati' in gpu_result.stdout.lower()")
 
 - name: Install GPU drivers (Intel)
   community.general.pacman:
     name:
       - mesa
+      - mesa-utils
+      # https://wiki.archlinux.org/title/Xorg
+      - xf86-video-intel
+      # https://wiki.archlinux.org/title/Hardware_video_acceleration
       - intel-media-driver
       - libva-intel-driver
+      # https://wiki.archlinux.org/title/Vulkan
       - vulkan-intel
-      - xf86-video-intel
+      # https://wiki.archlinux.org/title/GPGPU
+      - intel-compute-runtime
+      - opencl-clover-mesa
     state: present
   become: true
-  when: "'Intel' in gpu_result.stdout"
+  when: "'intel' in gpu_result.stdout.lower()"
+
+- name: Install GPU drivers (Nvidia)
+  community.general.pacman:
+    name:
+      - mesa
+      - mesa-utils
+      # https://wiki.archlinux.org/title/Xorg
+      - nvidia
+      # https://wiki.archlinux.org/title/Hardware_video_acceleration
+      - nvidia-utils
+      # https://wiki.archlinux.org/title/GPGPU
+      - cuda
+      - opencl-nvidia
+    state: present
+  become: true
+  when: ("'nvidia' in gpu_result.stdout.lower()") or ("'geforce' in gpu_result.stdout.lower()")
