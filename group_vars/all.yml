@@ -95,6 +95,8 @@ packages:
   - gnupg
   - gparted
   - gvfs
+  - gvfs-afc
+  - gvfs-gphoto2
   - gvfs-smb
   - htop
   - inkscape
@@ -105,6 +107,7 @@ packages:
   - jq
   - keepassxc
   - kubectl
+  - libimobiledevice
   - linux-firmware
   - man
   - man-db
