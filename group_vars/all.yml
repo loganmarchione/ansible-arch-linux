@@ -172,7 +172,6 @@ flatpaks:
   - com.slack.Slack
   - com.spotify.Client
   - com.valvesoftware.Steam
-  - com.valvesoftware.Steam.CompatibilityTool.Proton
   - fr.handbrake.ghb
   - info.beyondallreason.bar
   - org.bunkus.mkvtoolnix-gui
