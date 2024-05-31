@@ -40,19 +40,6 @@
     mode: 0644
   become: true
 
-- name: Start systemd service - reflector.service
-  ansible.builtin.systemd:
-    name: reflector.service
-    state: started
-  become: true
-
-- name: Start systemd service - reflector.timer
-  ansible.builtin.systemd:
-    name: reflector.timer
-    state: started
-    enabled: yes
-  become: true
-
 - name: Update pacman configuration file
   ansible.builtin.template:
     src: pacman.conf.j2
