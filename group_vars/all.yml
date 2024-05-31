@@ -160,7 +160,6 @@ aur_packages:
   - etcher-bin
   - joplin-appimage
   - makemkv
-  - mullvad-vpn-bin
   - rpi-imager-bin
   - svgo
   - variety-git
