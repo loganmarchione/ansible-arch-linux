@@ -204,19 +204,18 @@ base_fonts:
   - ttf-hack
 
 vscode_extension_list:
-  - ms-python.python
-  - ms-azuretools.vscode-docker
-  - redhat.vscode-yaml
-  - redhat.ansible
-  - vscode-icons-team.vscode-icons
-  - HashiCorp.HCL
-  - HashiCorp.terraform
-  - golang.go
   - arcticicestudio.nord-visual-studio-code
   - dracula-theme.theme-dracula
-  - donjayamanne.githistory
   - eamodio.gitlens
-  - mhutchie.git-graph
+  - golang.go
+  - HashiCorp.HCL
+  - HashiCorp.terraform
+  - ms-azuretools.vscode-docker
+  - ms-python.python
+  - redhat.ansible
+  - redhat.vscode-xml
+  - redhat.vscode-yaml
+  - vscode-icons-team.vscode-icons
 
 printing_scanning_packages:
   - cups
