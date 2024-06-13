@@ -215,6 +215,7 @@ vscode_extension_list:
   - redhat.ansible
   - redhat.vscode-xml
   - redhat.vscode-yaml
+  - streetsidesoftware.code-spell-checker
   - vscode-icons-team.vscode-icons
 
 printing_scanning_packages:
