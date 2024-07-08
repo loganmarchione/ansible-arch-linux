@@ -87,6 +87,7 @@ packages:
   - docker
   - docker-compose
   - e2fsprogs
+  - exfat-utils
   - firefox
   - flatpak
   - fwupd
