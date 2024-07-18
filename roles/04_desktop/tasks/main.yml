@@ -8,7 +8,6 @@
           # KDE apps/bundles
           - plasma-meta
           - plasma-workspace
-          - kde-multimedia-meta
           - kde-network-meta
           - kde-pim-meta
           - kde-sdk-meta
@@ -18,9 +17,14 @@
           - xdg-desktop-portal-kde
           # Individual apps
           - colord-kde
+          - ffmpegthumbs
           - gwenview
+          - kamoso
           - kcolorchooser
+          - kdegraphics-mobipocket
           - kdegraphics-thumbnailers
+          - kfilemetadata
+          - kmix
           - kparts
           - spectacle
           - svgpart
