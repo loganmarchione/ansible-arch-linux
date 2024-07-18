@@ -178,6 +178,8 @@ flatpaks:
   - org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
   - org.freedesktop.Platform.openh264/x86_64/2.3.0
   - org.gimp.GIMP
+  - org.kde.kolourpaint
+  - org.kde.okular
   - io.github.flattool.Warehouse
   - org.gtk.Gtk3theme.Adwaita-dark
   - org.gtk.Gtk3theme.Yaru-dark
