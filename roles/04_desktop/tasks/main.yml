@@ -5,9 +5,9 @@
     - name: Install Plasma
       community.general.pacman:
         name:
+          # KDE apps/bundles
           - plasma-meta
           - plasma-workspace
-          - kde-graphics-meta
           - kde-multimedia-meta
           - kde-network-meta
           - kde-pim-meta
@@ -16,6 +16,14 @@
           - kde-utilities-meta
           - sddm
           - xdg-desktop-portal-kde
+          # Individual apps
+          - colord-kde
+          - gwenview
+          - kcolorchooser
+          - kdegraphics-thumbnailers
+          - kparts
+          - spectacle
+          - svgpart
         state: present
       become: true
 
