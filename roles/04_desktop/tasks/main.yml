@@ -9,7 +9,6 @@
           - plasma-meta
           - plasma-workspace
           - kde-network-meta
-          - kde-pim-meta
           - kde-sdk-meta
           - kde-system-meta
           - kde-utilities-meta
@@ -24,6 +23,7 @@
           - kdegraphics-mobipocket
           - kdegraphics-thumbnailers
           - kfilemetadata
+          - kleopatra
           - kmix
           - kparts
           - spectacle
