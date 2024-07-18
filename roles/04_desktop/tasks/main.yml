@@ -8,7 +8,6 @@
           # KDE apps/bundles
           - plasma-meta
           - plasma-workspace
-          - kde-network-meta
           - kde-sdk-meta
           - kde-system-meta
           - kde-utilities-meta
@@ -20,9 +19,14 @@
           - gwenview
           - kamoso
           - kcolorchooser
+          - kdeconnect
           - kdegraphics-mobipocket
           - kdegraphics-thumbnailers
+          - kdenetwork-filesharing
           - kfilemetadata
+          - kio-extras
+          - kio-fuse
+          - kio-zeroconf
           - kleopatra
           - kmix
           - kparts
