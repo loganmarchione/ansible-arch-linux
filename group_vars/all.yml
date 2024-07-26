@@ -86,8 +86,9 @@ packages:
   - curl
   - docker
   - docker-compose
+  - dosfstools
   - e2fsprogs
-  - exfat-utils
+  - exfatprogs
   - firefox
   - flatpak
   - fwupd
