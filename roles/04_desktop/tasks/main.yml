@@ -29,7 +29,9 @@
           - kio-zeroconf
           - kleopatra
           - kmix
+          - kolourpaint
           - kparts
+          - okular
           - spectacle
           - svgpart
         state: present
