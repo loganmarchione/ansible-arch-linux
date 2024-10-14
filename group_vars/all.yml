@@ -89,6 +89,7 @@ packages:
   - dosfstools
   - e2fsprogs
   - exfatprogs
+  - ffmpeg
   - firefox
   - flatpak
   - fwupd
@@ -114,6 +115,7 @@ packages:
   - jq
   - keepassxc
   - kubectl
+  - lame
   - libimobiledevice
   - linux-firmware
   - man
@@ -191,6 +193,7 @@ flatpaks:
   - org.libreoffice.LibreOffice
   - org.mozilla.Thunderbird
   - org.remmina.Remmina
+  - org.tenacityaudio.Tenacity
   - us.zoom.Zoom
   # See other themes here
   # flatpak remote-ls flathub | grep org.gtk.Gtk3theme
