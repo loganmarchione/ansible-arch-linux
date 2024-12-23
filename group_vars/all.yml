@@ -187,6 +187,7 @@ flatpaks:
   - org.gimp.GIMP
   - io.github.flattool.Warehouse
   - it.mijorus.gearlever
+  - md.obsidian.Obsidian
   - org.gtk.Gtk3theme.Adwaita-dark
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
