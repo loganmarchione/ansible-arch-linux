@@ -166,7 +166,6 @@ packages:
 aur_packages:
   - 7-zip-bin
   - etcher-bin
-  - joplin-appimage
   - makemkv
   - rpi-imager-bin
   - svgo
