@@ -1,4 +1,4 @@
 ansible==11.1.0
-ansible-lint==24.12.2
+ansible-lint==25.1.0
 PyYAML==6.0.2
 yamllint==1.35.1
