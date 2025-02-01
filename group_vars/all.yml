@@ -163,7 +163,6 @@ aur_packages:
   - makemkv
   - rpi-imager-bin
   - svgo
-  - variety-git
   - ventoy-bin
 
 flatpaks:
