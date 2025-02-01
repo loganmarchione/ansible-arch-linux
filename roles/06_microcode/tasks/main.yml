@@ -12,11 +12,3 @@
       - intel-ucode
   become: true
   when: "'GenuineIntel' in ansible_processor"
-
-- name: Microcode bootloader reminder
-  ansible.builtin.pause:
-    prompt: |
-      "This is a reminder that you need to add the microcode hook for mkinitcpio"
-      "https://wiki.archlinux.org/title/microcode"
-      "Press [ENTER] to continue"
-    echo: no
