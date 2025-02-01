@@ -123,7 +123,6 @@ packages:
   - man-pages
   - minicom
   - ncdu
-  - neofetch
   - networkmanager
   - nextcloud-client
   - nextcloud-client-cloudproviders
@@ -135,13 +134,10 @@ packages:
   - pipewire
   - pipewire-alsa
   - pkgstats
-  - qbittorrent
   - rsync
   - screen
   - solaar
   - sudo
-  - texmaker
-  - texlive-latexextra
   - thunar
   - tree
   - unrar-free
@@ -157,10 +153,8 @@ packages:
   # Needed for GTK apps that run as Flatpaks
   - xdg-desktop-portal-gtk
   - xfsprogs
-  - youtube-dl
+  - yt-dlp
   - zip
-  - zsh
-  - zsh-completions
   - zstd
 
 aur_packages:
