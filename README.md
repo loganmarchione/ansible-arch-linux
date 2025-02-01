@@ -13,12 +13,18 @@ Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against 
 
 1. Install the necessary packages
    ```
-   sudo pacman -S ansible git python
+   sudo pacman -S git python
    ```
 1. Clone this repo
    ```
    git clone https://github.com/loganmarchione/ansible-arch-linux.git
    cd ansible-arch-linux
+   ```
+1. Install Ansible
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   pip3 install -r requirements.txt
    ```
 1. Install the Ansible requirements
    ```
