@@ -8,7 +8,7 @@ user:
   primary_group: users
   additional_groups: docker,wheel,render
   # /bin/bash or /bin/zsh
-  shell: /bin/zsh
+  shell: /bin/bash
   # See country list by running `reflector --list-countries`
   country: "United States"
 
