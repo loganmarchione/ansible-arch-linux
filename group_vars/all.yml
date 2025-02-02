@@ -123,6 +123,7 @@ packages:
   - man-db
   - man-pages
   - minicom
+  - mkvtoolnix-cli
   - ncdu
   - networkmanager
   - nextcloud-client
@@ -169,6 +170,7 @@ aur_packages:
 
 flatpaks:
   - com.discordapp.Discord
+  - com.github.PintaProject.Pinta
   - com.github.tchx84.Flatseal
   - com.slack.Slack
   - com.spotify.Client
