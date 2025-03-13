@@ -162,11 +162,9 @@ packages:
 
 aur_packages:
   - 7-zip-bin
-  - etcher-bin
   - makemkv
   - rpi-imager-bin
   - svgo
-  - ventoy-bin
 
 flatpaks:
   - com.discordapp.Discord
