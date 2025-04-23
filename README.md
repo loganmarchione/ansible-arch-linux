@@ -39,6 +39,3 @@ Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against 
    ```
    ansible-playbook main.yml --ask-become-pass
    ```
-
-## TODO
-- [X] Add reflector pacman hook
