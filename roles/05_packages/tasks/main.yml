@@ -5,6 +5,14 @@
     state: present
   become: true
 
+- name: Install Sunshine
+  community.general.pacman:
+    name: "lizardbyte/sunshine"
+    state: present
+  become: true
+  when:
+    - sunshine | default(false) | bool
+
 - name: Install font packages
   ansible.builtin.import_tasks: fonts.yml
 
