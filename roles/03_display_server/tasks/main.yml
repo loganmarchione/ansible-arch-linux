@@ -17,6 +17,8 @@
     name:
       - mesa
       - mesa-utils
+      - lib32-mesa
+      - lib32-mesa-utils
       # https://wiki.archlinux.org/title/Xorg
       - xf86-video-amdgpu
       # https://wiki.archlinux.org/title/Hardware_video_acceleration
@@ -24,6 +26,7 @@
       - libva-mesa-driver
       # https://wiki.archlinux.org/title/Vulkan
       - vulkan-radeon
+      - lib32-vulkan-radeon
       # https://wiki.archlinux.org/title/GPGPU
       - rocm-hip-runtime
       - rocm-hip-sdk
@@ -40,6 +43,8 @@
     name:
       - mesa
       - mesa-utils
+      - lib32-mesa
+      - lib32-mesa-utils
       # https://wiki.archlinux.org/title/Xorg
       - xf86-video-intel
       # https://wiki.archlinux.org/title/Hardware_video_acceleration
@@ -47,6 +52,7 @@
       - libva-intel-driver
       # https://wiki.archlinux.org/title/Vulkan
       - vulkan-intel
+      - lib32-vulkan-intel
       # https://wiki.archlinux.org/title/GPGPU
       - intel-compute-runtime
       - opencl-clover-mesa
@@ -59,10 +65,13 @@
     name:
       - mesa
       - mesa-utils
+      - lib32-mesa
+      - lib32-mesa-utils
       # https://wiki.archlinux.org/title/Xorg
       - nvidia
       # https://wiki.archlinux.org/title/Hardware_video_acceleration
       - nvidia-utils
+      - lib32-nvidia-utils
       # https://wiki.archlinux.org/title/GPGPU
       - cuda
       - opencl-nvidia
