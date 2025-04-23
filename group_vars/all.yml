@@ -51,6 +51,10 @@ enable_bluetooth: false
 # true or false
 laptop: false
 
+# whether to install sunshine (game streaming)
+# true or false
+sunshine: true
+
 # how many parallel downloads to run at once
 pacman:
   parallel_downloads: 10
