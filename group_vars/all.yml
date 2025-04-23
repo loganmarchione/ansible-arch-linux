@@ -140,6 +140,7 @@ packages:
   - rsync
   - screen
   - solaar
+  - steam
   - sudo
   - thunar
   - tree
@@ -172,7 +173,6 @@ flatpaks:
   - com.github.tchx84.Flatseal
   - com.slack.Slack
   - com.spotify.Client
-  - com.valvesoftware.Steam
   - fr.handbrake.ghb
   - info.beyondallreason.bar
   - org.bunkus.mkvtoolnix-gui
@@ -208,6 +208,7 @@ base_fonts:
   - otf-cascadia-code
   - ttf-cascadia-code
   - ttf-hack
+  - ttf-liberation
 
 vscode_extension_list:
   - arcticicestudio.nord-visual-studio-code
