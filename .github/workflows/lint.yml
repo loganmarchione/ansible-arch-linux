@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    name: Lint
+  yamllint:
+    name: yamllint
 
     runs-on: ubuntu-latest
     strategy:
@@ -37,10 +37,15 @@ jobs:
           pip3 install -r requirements.txt
           ansible-galaxy install -r requirements.yml
 
-      - name: Lint
+      - name: Install yamllint
         run: |
-          ansible --version
-          ansible-lint --version
+          python3 --version
           yamllint --version
-          yamllint --format parsable .
-          ansible-lint -v
+
+      - name: List files to yamllint
+        run: |
+          yamllint --list-files .
+
+      - name: Run yamllint
+        run: |
+          yamllint .
