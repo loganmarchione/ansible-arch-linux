@@ -1,9 +1,6 @@
 ---
 extends: default
 
-ignore: |
-    .github/workflows/main.yml
-
 rules:
   braces:
     level: warning
