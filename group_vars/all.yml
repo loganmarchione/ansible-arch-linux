@@ -79,6 +79,7 @@ disable_systemd_homed: true
 # Packages
 #
 packages:
+  - 7zip
   - alsa-firmware
   - alsa-plugins
   - alsa-utils
@@ -141,6 +142,7 @@ packages:
   - pipewire
   - pipewire-alsa
   - pkgstats
+  - rpi-imager
   - rsync
   - screen
   - solaar
@@ -166,9 +168,7 @@ packages:
   - zstd
 
 aur_packages:
-  - 7-zip-bin
   - makemkv
-  - rpi-imager-bin
   - svgo
 
 flatpaks:
