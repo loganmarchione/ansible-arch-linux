@@ -221,7 +221,7 @@ vscode_extension_list:
   - golang.go
   - HashiCorp.HCL
   - HashiCorp.terraform
-  - ms-azuretools.vscode-docker
+  - ms-azuretools.vscode-containers
   - ms-python.python
   - redhat.ansible
   - redhat.vscode-xml
