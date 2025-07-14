@@ -156,6 +156,7 @@ packages:
   - vi
   - vim
   - vlc
+  - vlc-plugins-all
   - wget
   - wireguard-tools
   - wireplumber
