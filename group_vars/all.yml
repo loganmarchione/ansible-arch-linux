@@ -185,6 +185,7 @@ flatpaks:
   - org.freedesktop.Platform.openh264/x86_64/2.3.0
   - org.gimp.GIMP
   - io.github.flattool.Warehouse
+  - io.missioncenter.MissionCenter
   - it.mijorus.gearlever
   - md.obsidian.Obsidian
   - org.gtk.Gtk3theme.Adwaita-dark
