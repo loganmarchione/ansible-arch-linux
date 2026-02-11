@@ -173,7 +173,6 @@ aur_packages:
   - svgo
 
 flatpaks:
-  - com.discordapp.Discord
   - com.github.PintaProject.Pinta
   - com.github.tchx84.Flatseal
   - com.slack.Slack
