@@ -28,12 +28,12 @@
       - vulkan-radeon
       - lib32-vulkan-radeon
       # https://wiki.archlinux.org/title/GPGPU
-      - rocm-hip-runtime
-      - rocm-hip-sdk
-      - hip-runtime-amd
-      - rocm-core
-      - rocm-opencl-runtime
-      - rocm-opencl-sdk
+      # - rocm-hip-runtime
+      # - rocm-hip-sdk
+      # - hip-runtime-amd
+      # - rocm-core
+      # - rocm-opencl-runtime
+      # - rocm-opencl-sdk
     state: present
   become: true
   when: ("'radeon' in gpu_result.stdout.lower()") or ("'amd/ati' in gpu_result.stdout.lower()")
@@ -54,8 +54,8 @@
       - vulkan-intel
       - lib32-vulkan-intel
       # https://wiki.archlinux.org/title/GPGPU
-      - intel-compute-runtime
-      - opencl-clover-mesa
+      # - intel-compute-runtime
+      # - opencl-clover-mesa
     state: present
   become: true
   when: "'intel' in gpu_result.stdout.lower()"
@@ -73,8 +73,8 @@
       - nvidia-utils
       - lib32-nvidia-utils
       # https://wiki.archlinux.org/title/GPGPU
-      - cuda
-      - opencl-nvidia
+      # - cuda
+      # - opencl-nvidia
     state: present
   become: true
   when: "'nvidia' in gpu_result.stdout.lower()"
