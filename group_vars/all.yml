@@ -218,7 +218,6 @@ base_fonts:
 vscode_extension_list:
   - arcticicestudio.nord-visual-studio-code
   - dracula-theme.theme-dracula
-  - eamodio.gitlens
   - golang.go
   - HashiCorp.HCL
   - HashiCorp.terraform
