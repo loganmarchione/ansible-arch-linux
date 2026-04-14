@@ -11,7 +11,7 @@
           - kde-sdk-meta
           - kde-system-meta
           - kde-utilities-meta
-          - sddm
+          - plasma-login-manager
           - xdg-desktop-portal-kde
           # Individual apps
           - colord-kde
@@ -37,9 +37,9 @@
         state: present
       become: true
 
-    - name: Start systemd service - sddm.service
+    - name: Start systemd service - plasmalogin.service
       ansible.builtin.systemd:
-        name: sddm.service
+        name: plasmalogin.service
         enabled: yes
       become: true
 
