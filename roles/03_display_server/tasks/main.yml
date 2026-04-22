@@ -22,7 +22,6 @@
       # https://wiki.archlinux.org/title/Xorg
       - xf86-video-amdgpu
       # https://wiki.archlinux.org/title/Hardware_video_acceleration
-      - mesa-vdpau
       - libva-mesa-driver
       # https://wiki.archlinux.org/title/Vulkan
       - vulkan-radeon
