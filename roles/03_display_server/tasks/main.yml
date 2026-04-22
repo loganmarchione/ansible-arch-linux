@@ -35,7 +35,7 @@
       # - rocm-opencl-sdk
     state: present
   become: true
-  when: ("'radeon' in gpu_result.stdout.lower()") or ("'amd/ati' in gpu_result.stdout.lower()")
+  when: ("radeon" in gpu_result.stdout.lower()) or ("amd/ati" in gpu_result.stdout.lower())
 
 - name: Install GPU drivers (Intel)
   community.general.pacman:
