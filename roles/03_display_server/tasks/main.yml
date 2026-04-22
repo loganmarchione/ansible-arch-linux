@@ -11,8 +11,6 @@
   ansible.builtin.shell: set -o pipefail && lspci | grep -i 'VGA\|3D\|display'  # noqa command-instead-of-shell
   register: gpu_result
   changed_when: no
-  check_mode: false
-  failed_when: false
 
 - name: Install GPU drivers (AMD)
   community.general.pacman:
@@ -37,7 +35,7 @@
       # - rocm-opencl-sdk
     state: present
   become: true
-  when: gpu_result.rc == 0 and (("radeon" in gpu_result.stdout.lower()) or ("amd/ati" in gpu_result.stdout.lower()))
+  when: ("radeon" in gpu_result.stdout.lower()) or ("amd/ati" in gpu_result.stdout.lower())
 
 - name: Install GPU drivers (Intel)
   community.general.pacman:
@@ -59,7 +57,7 @@
       # - opencl-clover-mesa
     state: present
   become: true
-  when: gpu_result.rc == 0 and 'intel' in gpu_result.stdout.lower()
+  when: "'intel' in gpu_result.stdout.lower()"
 
 - name: Install GPU drivers (Nvidia)
   community.general.pacman:
@@ -78,4 +76,4 @@
       # - opencl-nvidia
     state: present
   become: true
-  when: gpu_result.rc == 0 and 'nvidia' in gpu_result.stdout.lower()
+  when: "'nvidia' in gpu_result.stdout.lower()"
