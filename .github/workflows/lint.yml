@@ -49,3 +49,37 @@ jobs:
       - name: Run yamllint
         run: |
           yamllint .
+
+  ansible-lint:
+    name: ansible-lint
+
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Install system dependencies
+        run: |
+          pacman -Syu --noconfirm python python-pip git pciutils
+
+      - name: Check out the codebase
+        uses: actions/checkout@v6
+
+      - name: Install dependencies
+        run: |
+          pip3 install -r requirements.txt --break-system-packages
+          ansible-galaxy install -r requirements.yml
+
+      - name: Display versions
+        run: |
+          ansible --version
+          yamllint --version
+          ansible-lint --version
+
+      - name: Run syntax check
+        run: |
+          ansible-playbook main.yml --syntax-check
+
+      - name: Run ansible-lint
+        run: |
+          ansible-lint -v main.yml

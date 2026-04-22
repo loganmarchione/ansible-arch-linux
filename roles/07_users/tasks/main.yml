@@ -10,8 +10,9 @@
   become: true
 
 - name: Run xdg-user-dirs-update
-  ansible.builtin.shell:
+  ansible.builtin.command:
     cmd: xdg-user-dirs-update
+  changed_when: false
 
 - name: Git config user.name
   community.general.git_config:

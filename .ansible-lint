@@ -1,7 +1,8 @@
 ---
 enable_list:
   - fqcn-builtins  # opt-in
-warn_list:
+exclude_paths:
+  - .github/workflows
+warn_list:  # https://github.com/ansible/ansible-lint/discussions/1465
   - role-name
-  - var-naming
-  - yaml[truthy]
+  - var-naming[no-role-prefix]
