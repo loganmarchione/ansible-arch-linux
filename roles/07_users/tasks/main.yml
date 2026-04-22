@@ -9,6 +9,10 @@
     state: present
   become: true
 
+- name: Run xdg-user-dirs-update
+  ansible.builtin.shell:
+    cmd: xdg-user-dirs-update
+
 - name: Git config user.name
   community.general.git_config:
     name: user.name

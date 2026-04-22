@@ -23,13 +23,6 @@
     enabled: yes
   become: true
 
-- name: Start systemd service - xdg-user-dirs-update.service
-  ansible.builtin.systemd:
-    name: xdg-user-dirs-update.service
-    state: started
-    enabled: yes
-    scope: user
-
 - name: Update reflector configuration file
   ansible.builtin.template:
     src: reflector.conf.j2
