@@ -1,0 +1,63 @@
+---
+- name: Install ufw
+  community.general.pacman:
+    name: "ufw"
+    state: present
+  become: true
+
+- name: Start systemd service - ufw
+  ansible.builtin.systemd:
+    name: ufw
+    state: started
+    enabled: yes
+  become: true
+
+- name: Deny incoming through UFW
+  community.general.ufw:
+    policy: deny
+    direction: incoming
+  become: true
+
+- name: Allow outgoing through UFW
+  community.general.ufw:
+    policy: allow
+    direction: outgoing
+  become: true
+
+- name: Configure UFW from template
+  ansible.builtin.template:
+    src: ufw_sunshine.j2
+    dest: /etc/ufw/applications.d/sunshine
+    backup: no
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+  when:
+    - enable_sunshine | default(false) | bool
+
+- name: Allow Sunshine through UFW (TCP)
+  community.general.ufw:
+    rule: allow
+    name: Sunshine-TCP
+  become: true
+  when:
+    - enable_sunshine | default(false) | bool
+
+- name: Allow Sunshine through UFW (UDP)
+  community.general.ufw:
+    rule: allow
+    name: Sunshine-UDP
+  become: true
+  when:
+    - enable_sunshine | default(false) | bool
+
+- name: Enable UFW
+  community.general.ufw:
+    state: enabled
+  become: true
+
+- name: Reload UFW
+  community.general.ufw:
+    state: reloaded
+  become: true

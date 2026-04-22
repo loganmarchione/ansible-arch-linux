@@ -11,7 +11,12 @@
     state: present
   become: true
   when:
-    - sunshine | default(false) | bool
+    - enable_sunshine | default(false) | bool
+
+- name: Install ufw
+  ansible.builtin.import_tasks: ufw.yml
+  when:
+    - enable_ufw | default(false) | bool
 
 - name: Install font packages
   ansible.builtin.import_tasks: fonts.yml

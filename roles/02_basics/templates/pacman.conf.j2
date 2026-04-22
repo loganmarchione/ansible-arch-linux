@@ -99,7 +99,7 @@ Include = /etc/pacman.d/mirrorlist
 #SigLevel = Optional TrustAll
 #Server = file:///home/custompkgs
 
-{% if sunshine | default(false) | bool %}
+{% if enable_sunshine | default(false) | bool %}
 [lizardbyte]
 SigLevel = Optional
 Server = https://github.com/LizardByte/pacman-repo/releases/latest/download

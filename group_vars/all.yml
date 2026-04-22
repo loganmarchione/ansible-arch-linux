@@ -47,13 +47,17 @@ detect_scanner: true
 # true or false
 enable_bluetooth: false
 
+# whether to enable ufw (firewall) or not
+# true or false
+enable_ufw: true
+
 # whether to install laptop tools
 # true or false
 laptop: false
 
 # whether to install sunshine (game streaming)
 # true or false
-sunshine: true
+enable_sunshine: true
 
 # how many parallel downloads to run at once
 pacman:
