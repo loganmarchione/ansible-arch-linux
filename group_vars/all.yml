@@ -195,7 +195,7 @@ flatpaks:
   - org.gtk.Gtk3theme.Yaru-dark
   - org.gtk.Gtk3theme.Yaru-light
   - org.libreoffice.LibreOffice
-  - org.mozilla.Thunderbird
+  - org.mozilla.thunderbird_esr
   - org.remmina.Remmina
   - org.tenacityaudio.Tenacity
   - us.zoom.Zoom
