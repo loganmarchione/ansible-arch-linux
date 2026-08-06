@@ -104,6 +104,7 @@ packages:
   - flatpak
   - fwupd
   - fzf
+  - gimp
   - git
   - gnupg
   - gparted
@@ -143,6 +144,7 @@ packages:
   - openssh
   - openvpn
   - picocom
+  - pinta
   - pipewire
   - pipewire-alsa
   - pkgstats
@@ -152,6 +154,7 @@ packages:
   - solaar
   - steam
   - sudo
+  - tenacity
   - thunar
   - tree
   - unrar-free
@@ -177,7 +180,6 @@ aur_packages:
   - svgo
 
 flatpaks:
-  - com.github.PintaProject.Pinta
   - com.github.tchx84.Flatseal
   - com.slack.Slack
   - com.spotify.Client
@@ -186,7 +188,6 @@ flatpaks:
   - org.bunkus.mkvtoolnix-gui
   - org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
   - org.freedesktop.Platform.openh264/x86_64/2.3.0
-  - org.gimp.GIMP
   - io.github.flattool.Warehouse
   - io.missioncenter.MissionCenter
   - it.mijorus.gearlever
@@ -197,7 +198,6 @@ flatpaks:
   - org.libreoffice.LibreOffice
   - org.mozilla.thunderbird_esr
   - org.remmina.Remmina
-  - org.tenacityaudio.Tenacity
   - us.zoom.Zoom
   # See other themes here
   # flatpak remote-ls flathub | grep org.gtk.Gtk3theme
