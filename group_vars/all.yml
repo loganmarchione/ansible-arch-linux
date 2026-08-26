@@ -241,5 +241,5 @@ printing_scanning_packages:
   - simple-scan
 
 printing_scanning_aur_packages:
-  - brlaser-git
+  - brlaser
   - brscan4
